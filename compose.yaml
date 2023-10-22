@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: mysql
+    environment:
+      - 'MYSQL_ROOT_PASSWORD=root'
+      - 'MYSQL_DATABASE=challenge'
+    ports:
+      - '3306:3306'
+    volumes:
+      - poi_data:/var/lib/mysql
+
+volumes:
+  poi_data:
